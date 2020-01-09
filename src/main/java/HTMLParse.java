@@ -30,6 +30,7 @@ class HTMLParse {
             for (Element row : rows){
                 String lineName = row.select("td:eq(0) span a").attr("title");
                 String station = row.select("td:eq(1) span a").text();
+
                 if (moscowMetro.containsKey(lineName)){
                     JSONArray stationArray = (JSONArray) moscowMetro.get(lineName);
                     stationArray.add(station);
